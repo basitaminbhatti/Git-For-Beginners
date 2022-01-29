@@ -1,0 +1,760 @@
+[![Git](https://i.imgur.com/16piyqz.png "Git")](https://git-scm.com/ "Git")
+### Table of Contents
+
+[TOCM]
+
+
+Git
+=============
+Git is the most commonly used version control system. Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source. 
+
+So regardless of whether you write code that only you will see, or work as part of a team, Git will be useful for you.
+
+![](https://i.imgur.com/UmkYZFK.png)
+Git is software that runs locally. Your files and their history are stored on your computer. You can also use online hosts (such as [GitHub](https://github.com/ "GitHub") or [Bitbucket](https://bitbucket.org/ "Bitbucket")) to store a copy of the files and their revision history. Having a centrally located place where you can upload your changes and download changes from others, enable you to collaborate more easily with other developers. Git can automatically merge the changes, so two people can even work on different parts of the same file and later merge those changes without losing each others work!
+GitHub
+=============
+GitHub is a website and cloud-based service that helps developers store and manage their code, as well as track and control changes to their code. To understand exactly what GitHub is, you need to know two connected principles:
+
+- Version control
+- Git
+
+What is Version Control?
+=============
+You can think of a version control system (short: “VCS”) as a kind of“database”. It lets you save a snapshot of your complete project at any time you want. When you later take a look at an older snapshot (let's start calling it“version”), your VCS shows you exactly how it differed from the previous one.
+
+![](https://i.imgur.com/u9lC5qq.jpg)
+
+Version control is independent of the kind of project / technology / framework you are working with:
+- It works just as well for an HTML website as it does for a design project or
+an iPhone app
+- It lets you work with any tool you like; it doesn‘t care what kind of text
+editor, graphics program, file manager or other tool you use
+Also, don‘t confuse a VCS with a backup or a deployment system. You don‘t have to change or replace any other part of your tool chain when you start using version control.<br>
+A version control system records the changes you make to your project‘s files. This is what version control is about. It‘s really as simple as it sounds.
+
+## Version Control Benefits 
+There are many benefits to version control. The biggest benefits of the right VCS include:
+
+- A single source of truth across teams, code, and assets.
+- Traceability for every change ever made.
+- Speed for development teams who don't want to waste time looking for a file.
+
+Getting Started
+==========
+# Installing Git
+## Windows
+####  Download Git for Windows
+1. Browse to the official Git website: https://git-scm.com/downloads
+2. Click the download link for Windows and allow the download to complete.
+
+![](https://i.imgur.com/mMKbDNu.png)
+
+#### Extract and Launch Git Installer
+3 . Browse to the download location (or use the download shortcut in your browser). Double-click the file to extract and launch the installer.
+
+![](https://i.imgur.com/OcsTh69.png)
+
+ 4 . Allow the app to make changes to your device by clicking **Yes** on the User Account Control dialog that opens.
+
+![](https://i.imgur.com/uTpIa1L.png)
+
+ 5 . Review the GNU General Public License, and when you’re ready to install, click **Next**.
+
+![](https://i.imgur.com/Wd1Vcxs.png)
+
+ 6 . The installer will ask you for an installation location. Leave the default, unless you have reason to change it, and click **Next**.
+
+![](https://i.imgur.com/1u7t3W3.png)
+
+ 7 . A component selection screen will appear. Leave the defaults unless you have a specific need to change them and click **Next**.
+
+![](https://i.imgur.com/XI0JIy2.png)
+
+ 8 . The installer will offer to create a start menu folder. Simply click **Next**.
+
+![](https://i.imgur.com/o8mN6Rp.png)
+
+ 9 . Select a text editor you’d like to use with Git. Use the drop-down menu to select Notepad++ (or whichever text editor you prefer) and click **Next**.
+
+![](https://i.imgur.com/sIRCDTz.png)
+
+ 10 . The next step allows you to choose a different name for your initial branch. The default is 'master.' Unless you're working in a team that requires a different name, leave the default option and click **Next**.
+
+![](https://i.imgur.com/8pB5NoV.png)
+
+ 11 . This installation step allows you to change the **PATH environment**. The **PATH** is the default set of directories included when you run a command from the command line. Leave this on the middle (recommended) selection and click **Next**.
+
+![](https://i.imgur.com/TgMjc46.png)
+
+#### Server Certificates, Line Endings and Terminal Emulators
+ 12 . The installer now asks which SSH client you want Git to use. Git already comes with its own SSH client, so if you don't need a specific one, leave the default option and click **Next**.
+
+![](https://i.imgur.com/8V73PCP.png)
+
+ 13 . The next option relates to server certificates. Most users should use the default. If you’re working in an Active Directory environment, you may need to switch to Windows Store certificates. Click **Next**.
+
+![](https://i.imgur.com/jLu0LTz.png)
+
+ 14 . The next selection converts line endings. It is recommended that you leave the default selection. This relates to the way data is formatted and changing this option may cause problems. Click **Next**.
+
+![](https://i.imgur.com/3ZNpoHV.png)
+
+ 15 . Choose the terminal emulator you want to use. The default MinTTY is recommended, for its features. Click **Next**.
+
+![](https://i.imgur.com/Godf6n1.png)
+
+ 16 . The installer now asks what the `git pull` command should do. The default option is recommended unless you specifically need to change its behavior. Click **Next** to continue with the installation.
+
+![](https://i.imgur.com/EJdVW0E.png)
+
+ 17 . Next you should choose which credential helper to use. Git uses credential helpers to fetch or save credentials. Leave the default option as it is the most stable one, and click **Next**.
+
+![](https://i.imgur.com/1U8FwAw.png)
+
+#### Additional Customization Options
+ 18 . The default options are recommended, however this step allows you to decide which extra option you would like to enable. If you use symbolic links, which are like shortcuts for the command line, tick the box. Click **Next**.
+
+![](https://i.imgur.com/uClHvXi.png)
+
+ 19 . Depending on the version of Git you’re installing, it may offer to install experimental features. At the time this article was written, the options to include support for pseudo controls and a built-in file system monitor were offered. Unless you are feeling adventurous, leave them unchecked and click **Install**.
+
+![](https://i.imgur.com/gGACFNn.png)
+
+#### Complete Git Installation Process
+ 20 . Once the installation is complete, tick the boxes to view the Release Notes or Launch Git Bash, then click **Finish**.
+
+![](https://i.imgur.com/fDfUnVX.png)
+
+Configuring Git
+==========
+### Launch Git Bash Shell
+To launch Git Bash open the Windows Start menu, type git bash and press Enter (or click the application icon).
+
+![](https://i.imgur.com/CBfBuxU.png)
+
+Now that you have git installed, it is a good idea to set up your personal information that will be used when you commit your code.
+
+The following commands will set your git commit **username** and **email address**:
+```shell
+$ git config --global user.name "Your Name"
+$ git config --global user.email "youremail@yourdomain.com"
+```
+To verify the configuration changes, type:
+```shell
+$ git config --list
+```
+The output should look something like this:
+
+![](https://i.imgur.com/cJXMjOO.png)
+
+Git- Three Stage Architecture
+==================
+First of all, let us have a look at a two stage architecture Version Control System.
+
+![](https://i.imgur.com/y42N1uA.png)
+
+In a two stage Version Control System, we work on our working directory, commit some changes and then push to the repository. Then again, we can pull the changes from the repository (changes which might have done by our colleagues), commit some changes, and again push back the files to the repository.
+
+Till now, it seems very good, but now imagine a situation, when you are working on a project consisting of say 4 files. Now, you have finished working on 2 files, but in other 2 files, you have encountered some bug. In such situation, if you commit changes to the repository, then the other two files containing bug will also be committed to the repository. This is a serious problem!
+
+But git solves this problem by introducing a middle stage called “staging area” in this architecture. Let us have a look at three stage architecture now.
+
+![](https://i.imgur.com/FPPyXif.png)
+
+Thus, git allows us to first push our files to staging area, and then we can commit those staged files. Continuing our above example, we can only push those two bug-free complete files to staging area and then further commit our changes. The other two files in progress can remain in our working directory. They can be modified later and committed when you need to. Another important advantage of staging area is that files from staging area can again be pulled to our working directory, if we feel they need some more changes before committing them.
+
+**It is to be noted that it is not compulsory in git to first push the files to staging area. The changes can even be directly committed, but it is always a good practice to first stage our files.**
+
+Tracking Our first Git Project
+==================
+Let’s say we have 2 files in a folder for which we want to create a git repository. So follow these steps to track these files using git.
+
+- Open the folder, Right-Click anywhere while shifting and choose **Git Bash Here**.
+
+![](https://i.imgur.com/v38uQQE.png)
+
+- After Git bash is opened type “**git status**”.
+
+```shell
+ $ git status
+```
+![](https://i.imgur.com/nenKgrK.png)
+
+- It will give you a message that “fatal: not a git repository (or any of the parent directories): .git”.
+
+- It is a message that says these files are not considered as a git repository.
+
+- Now we will type “**git init**” to initialize this folder as a repository.
+
+```shell
+ $ git init
+```
+
+![](https://i.imgur.com/91AvPqR.png)
+
+- Now if we type “**git status**” then we will get the files which are present in the folder. Also, it says there that the files are not tracked.
+
+```shell
+ $ git status
+```
+![](https://i.imgur.com/MLoVx5X.png)
+
+- Now to track all the files inside this got repository we will type  **git add - -a** , which will add all these files to the staging area.
+
+```shell
+ $ git add - -a
+```
+![](https://i.imgur.com/WcAI0ln.png)
+
+- Now if we type **git status** then says there that all the files tracked but not commit yet.
+
+```shell
+ $ git status
+```
+![](https://i.imgur.com/wsoMWdO.png)
+
+- Now we have to commit using this command **git commit -m “Initial Commit”**.
+
+```shell
+ $ git  commit -m "Initial Commit"
+```
+![](https://i.imgur.com/apZHb7i.png)
+
+- Now if we do **git status** again it will say There’s nothing to commit, working tree clean. Which means we have successfully tracked our files.
+
+```shell
+ $ git status
+```
+![](https://i.imgur.com/hSjoNOO.png)
+
+- Now to see the commits we have made, we will use **git log** command.
+
+```shell
+ $ git log
+```
+
+![](https://i.imgur.com/q8O1Bve.png)
+
+- Now if we modify a single file and want to stage that only file we will use **git add file.ext** (Where file.ext is the filename and extension).
+
+![](https://i.imgur.com/frVAQCN.png)
+
+```shell
+ $ git add File1.txt
+```
+![](https://i.imgur.com/PxgB58d.png)
+
+- Now we will commit with a message by typing **git commit -m “Your commit message”**
+
+```shell
+ $ git  commit -m "Second Commit"
+```
+![](https://i.imgur.com/0TDcY19.png)
+
+- Done Now You have successfully tracked your files.
+
+Cloning a Remote Git Repository from GitHub
+=============================
+- Open Browser and go to the GitHub page of that git repository.
+
+![](https://i.imgur.com/n9AhhYe.png)
+
+- Now click on code or download and copy the URL.
+
+![](https://i.imgur.com/o3zgTMx.png)
+
+- Open git bash and type `git clone (copied URL)`
+
+```shell
+ $ git clone https://github.com/basitaminbhatti/Udacity-AI-Programming-with-Python.git
+```
+- Wait for the git clone to complete, this will only take a little bit of time for the first time.
+
+![](https://i.imgur.com/TIsAQLi.png)
+
+- Now you can change the files locally, track them also commit them locally.
+
+File Status Lifecycle
+============
+When you start to track files on an empty repository every file stays in the untracked stage. Which means we have not staged these files. So after adding the files by typing `git add --a`, every file moves into the unmodified section. Now if we change a few files they will be moved to modified and staged. Now what happened here is, we have added every file to the tracker and now as we modify files will be moved to the modified phase. Now if we run the add command then the files which were in the modified stage will be staged.
+
+- Let’s open a new folder and initialize as a git repo by opening Git bash and typing `git init`
+- Now lets add the files by using `git add --a`
+- Now every file has been staged.
+- Now if we change 1 file and do `git status` then you will see that the file we changed is present both on staging area and untracked area. Because you have staged the file and those are meant to go to the commit until the user stages other changes. So only those will go to the next commit which are staged. The untracked files will be ignored unless the user adds them to stage.
+
+![](https://i.imgur.com/pAm1dh1.png)
+
+
+Gitignore
+=================
+### Introduction
+When you make commits in a git repository, you choose which files to stage and commit by using `git add FILENAME` and then `git commit`. But what if there are some files that you never want to commit? It's too easy to accidentally commit them (especially if you use `git add .` to stage all files in the current directory). That's where a `.gitignore` file comes in handy. It lets Git know that it should ignore certain files and not track them.
+
+### .gitignore File
+The `.gitignore file` is a text file that tells Git which files or folders to ignore in a project.
+
+A local .gitignore file is usually placed in the root directory of a project. You can also create a global `.gitignore` file and any entries in that file will be ignored in all of your Git repositories.
+
+To create a local `.gitignore` file, create a text file and name it `.gitignore` (remember to include the `.` at the beginning). Then edit this file as needed. Each new line should list an additional file or folder that you want Git to ignore.
+
+The entries in this file can also follow a matching pattern.
+
+- `*` is used as a wildcard match
+- `/` is used to ignore pathnames relative to the .gitignore file
+- `#` is used to add comments to a .gitignore file
+
+This is an example of what the `.gitignore` file could look like:
+    # Ignore Mac system files
+    .DS_store
+    
+    # Ignore node_modules folder
+    node_modules
+    
+    # Ignore all text files
+    *.txt
+    
+    # Ignore files related to API keys
+    .env
+    
+    # Ignore SASS config files
+    .sass-cache
+### Adding .gitignore to your repo and ignore files:
+- Let’s start by creating an unnecessary file. 
+- Open git bash on that folder and type `touch file.log`
+
+```shell
+ $ touch file.log
+```
+![](https://i.imgur.com/6ekDkLc.png)
+
+- Now you will see file.log will be created.
+
+![](https://i.imgur.com/WhfUn2m.png)
+
+- Now we will gitignore this file.
+- Again open git bash and type `touch .gitignore`
+
+```shell
+ $ touch .gitignore
+```
+
+![](https://i.imgur.com/1UBetTs.png)
+
+- Now if you do `git status` it will return you 2 untracked files, .gitignore and file.log.
+
+```shell
+ $ git status
+```
+
+![](https://i.imgur.com/4BvUZWW.png)
+
+- Now let’s open `.gitignore` file using notepad, type there file.log and save and close it.
+
+![](https://i.imgur.com/jg54IDE.png)
+
+- Now if we do `git status` it will return only 1 file, which is .gitignore. Because the other one will be ignored.
+
+```shell
+ $ git status
+```
+![](https://i.imgur.com/bisrv9F.png)
+
+- Now type `git add --a` to add gitignore to the staging area.
+
+```shell
+ $ git add - -a
+```
+
+![](https://i.imgur.com/WcAI0ln.png)
+
+- Now let’s commit by typing `git commit -m “added .gitignore”`
+
+```shell
+ $ git  commit -m "added .gitignore"
+```
+
+![](https://i.imgur.com/5HINTR7.png)
+
+- Done! We have successfully created .gitignore for our repo. 
+
+### Ignoring Specific Extension files:
+- Create .gitignore the same as the last one.
+- Now open it using notepad and type there `*.extension` to ignore. **(example for ignoring .log files : “*.log”)**
+
+![](https://i.imgur.com/LYBpA9C.png)
+
+- Now save and exit the notepad and commit the gitignore to your repo.
+
+### Ignoring Folders:
+- Now we will ignore a whole directory.
+- Create and open .gitignore and type there the directory name followed by `\` **(example: dir/ )**
+
+![](https://i.imgur.com/uh4LoRf.png)
+- If you create a blank folder, git will automatically ignore it.
+
+Git Diff
+=====
+ Showing Changes Between Commits/Staging Area & Working Directory
+ <hr>
+ ### What is Git Diff?
+ Diff command is used in git to track the difference between the changes made on a file. Since Git is a version control system, tracking changes is a very vital part to it. Diff command takes two inputs and shows the differences between them. These inputs can be branches, working trees, commits and more. Now Let’s learn about Git Diff in these simple steps.
+-  Let’s start by staging one file. 
+- Open git bash on that folder and add that file into the staging area by typing `git add --a`
+
+```shell
+ $ git add - -a
+```
+
+![](https://i.imgur.com/3T7l383.png)
+
+- Now if you do `git status` it will show that the file has been staged.
+
+```shell
+ $ git status
+```
+
+![](https://i.imgur.com/9UylG4Z.png)
+
+- Now if you modify the file and do `git status` , it will show that the file has been modified and not staged for commit and also it will show that the file is ready to be committed.
+
+```shell
+ $ git status
+```
+
+![](https://i.imgur.com/2SCqGcE.png)
+
+Why does it happen? It happens only because we have staged the file earlier so it has moved to the staging area and is ready to be committed, and when we have modified it, it also shows up on the modified area. We have seen this happen earlier too. 
+
+- Now let’s compare the working directory with the staging area so we can see those changes.
+- Type `git diff` and see the output.
+
+```shell
+ $ git diff
+```
+
+- The output should look like this.
+
+![](https://i.imgur.com/WBG80DC.png)
+
+- Now if we do `git add --a` and do `git diff` it will show nothing because we have staged every change.
+
+
+
+### Examine Git Diff Output
+ Let us now examine a more detailed breakdown of the diff output.
+####  1. Comparison input
+
+![](https://i.imgur.com/iZBvqiX.png)
+
+This line displays the input sources of the diff. We can see that `a/File1.txt` and `b/File1.txt` have been passed to the diff.
+
+####  2. Meta data
+
+![](https://i.imgur.com/7rzN5UB.png)
+
+This line displays some internal Git metadata. You will most likely not need this information. The numbers in this output correspond to Git object version hash identifiers.
+
+####  3. Markers for changes
+![](https://i.imgur.com/dYfrTR4.png)
+
+These lines are a legend that assigns symbols to each diff input source. In this case, changes from `a/File1.txt` are marked with a - - - and the changes from `b/File1.txt` are marked with the +++ symbol.
+
+####  4. Diff chunks
+The remaining diff output is a list of diff 'chunks'. A diff only displays the sections of the file that have changes. In our current example, we have chunks as we are working with a simple scenario. Chunks have their own granular output semantics.
+
+  ![](https://i.imgur.com/RfvaLYw.png)
+
+The first line is the chunk header. Each chunk is prepended by a header inclosed within **@@ symbols.** The content of the header is a summary of changes made to the file.
+  ![](https://i.imgur.com/qGCjbDs.png)
+
+In this header example, **7** lines have been extracted starting from line number **3**. Additionally, **7** lines have been added starting at line number **3**.
+
+The remaining content of the diff chunk displays the recent changes. Each changed line is prepended with a `+` or `-` symbol indicating which version of the diff input the changes come from. As we previously discussed, `-` indicates changes from the `a/File1.txt` and `+` indicates changes from `b/File1.txt`
+
+### Git Diff in previous commits:
+- If we use `git diff --staged` it will compare every commit with your working directory.
+
+```shell
+ $ git diff --staged
+``` 
+
+![](https://i.imgur.com/naFBTke.png)
+
+Skipping The Staging Area
+================
+- Let’s modify a file in our directory.
+- Now open git bash in that directory. 
+- If we do `git status` it will show us that the file has been modified but not has been staged.
+
+```shell
+ $ git status
+```
+
+![](https://i.imgur.com/Oe0aDae.png)
+
+- Let’s create a new file on that directory and do `git status`
+
+```shell
+ $ git touch file3.txt
+
+```
+![](https://i.imgur.com/OQyZDqB.png)
+
+```shell
+ $ git status
+```
+![](https://i.imgur.com/a9cdZ8Z.png)
+
+- It will show us that the tracked file (the file we modified earlier) has been modified but not added to the staging area and the new file is untracked.
+
+- Now let’s skip the staging and directly commit.
+
+- **NOTE:** Only tracked files can skip the staging area, to add your file to tracker type `git add --a` **or** `git add filename.extension`
+
+- Now let's skip the staging by typing `git commit -a -m “Direct commit”`
+
+```shell
+ $ git commit -a -m “Direct commit”
+```
+![](https://i.imgur.com/IxFtkz5.png)
+
+- Now if we do `git status` it will show that the working directory is clean. Which means we have successfully skipped the staging area and committed the changes.
+
+```shell
+ $ git status
+```
+
+![](https://i.imgur.com/vNANPw3.png)
+
+Moving and Renaming Files
+=================
+We can also do it manually but then, we need to stage those changes using git bash. That is why we are going to do it inside git. Git will automatically stage it after **moving/deleting/renaming** that file. So let’s get started.
+### Deleting Files:
+To delete files using git we need use this command: `git rm filename.extension` It will delete the file and if you do `git status` now it will say that the file has been deleted and staged. Now we can commit it by using the “git commit -m “commit message”” command.
+
+```shell
+ $ git rm file3.txt  # where file name is file3.txt
+```
+![](https://i.imgur.com/5aIyf6d.png)
+
+```shell
+ $ git status
+```
+![](https://i.imgur.com/oaL85wL.png)
+
+### Renaming Files:
+To rename file we need to use this command : `git mv filename.extension renamefile.extension` It will rename the file from **filename.extension** to **renamefile.extension**. And it will also get automatically staged by git. All we need to do is commit.
+
+```shell
+ $ git mv File1.txt NewFileName.txt
+```
+
+![](https://i.imgur.com/HWCirdG.png)
+
+### Untracking Tracked Files:
+The Git rm –cached flag removes a file from the staging area. The files from the working directory will remain intact. This means that you’ll still have a copy of the file locally. The file will be removed from the index tracking your Git project.
+
+To untrack a specific file we need to use `git rm --cached file.extension` command. It will remove that file from the tracker and it will become an untracked file.
+
+```shell
+ $ git rm --cached IGo.txt
+```
+
+![](https://i.imgur.com/GjU77lF.png)
+
+Git Log
+=====
+### Commits History:
+To see the commits made on the git repo, we need to type `git log` After typing this you can see the commits that have been made on the repo.
+
+```shell
+ $ git log
+```
+![](https://i.imgur.com/Otoz7Ww.png)
+
+**Output:**
+![](https://i.imgur.com/brU3fWS.png)
+
+To exit we need to type “**q**” on our keyboard and press enter.
+
+### Diff in Commits:
+To see the Diff in a commit we need to use `git log -p` It will show what has been changed on a commit.
+
+```shell
+ $ git log -p
+```
+![](https://i.imgur.com/ywPO9KN.png)
+
+**Output:**
+![](https://i.imgur.com/Cqc9Btq.png)
+
+###  Specific No Commits with Changes:
+To see specific no commits with changes we need to use `git log -p -2` (for seeing the last 2 changes).
+```shell
+ $ git log -p -2
+```
+![](https://i.imgur.com/SbUe1TZ.png)
+### Brief Summary:
+We can get a brief summary of commits by typing `git log --stat`
+```shell
+ $ git log --stat
+```
+![](https://i.imgur.com/R6qsUT1.png)
+
+**Output:**
+![](https://i.imgur.com/7G7LHte.png)
+
+### Customized Commit Output:
+#### Pretty
+- ##### One Line
+If you want to see the commits on one line then type `git log --pretty=oneline`
+
+```shell
+ $ git log --pretty=oneline
+```
+![](https://i.imgur.com/RSK7drw.png)
+
+**Output:**
+
+![](https://i.imgur.com/6BXhMW4.png)
+
+- ##### Short
+If you just want to see the commits and The author then use `git log --pretty=short`
+
+```shell
+ $ git log --pretty=short
+```
+![](https://i.imgur.com/NhD5PNI.png)
+
+**Output:**
+
+![](https://i.imgur.com/YpiJfYN.png)
+
+- ##### Full
+If you want a little bit more info like who is the committer, commit message, then use `git log --pretty=full`
+
+```shell
+ $ git log --pretty=full
+```
+![](https://i.imgur.com/SXZzoXQ.png)
+
+**Output:**
+
+![](https://i.imgur.com/JUMEayD.png)
+
+- ##### Format
+We can format the output by using the formatting  codes provided in [Gits](https://git-scm.com/docs/git-log#:~:text=Placeholders%20that%20expand%20to%20information%20extracted%20from%20the%20commit%3A "Gits") website.
+**Example:**
+we can use this format to print just the author name and the hash : `git log --pretty=format:“%h --%ae”`
+
+```shell
+ $ git log --pretty=format:“%h --%ae”
+```
+![](https://i.imgur.com/r6w98cG.png)
+
+#### Since
+- ##### Weeks
+If you want to filter commits by time, then use this command, `git log --since=2.weeks` to see the last 2 weeks of data.
+
+```shell
+ $ git log --since=2.weeks
+```
+![](https://i.imgur.com/3OnKT0v.png)
+
+**Output:**
+![](https://i.imgur.com/sccusUV.png)
+
+- ##### Months
+To see the last 2 months of data type `git log --since=2.months`
+
+```shell
+ $ git log --since=2.months
+```
+![](https://i.imgur.com/rxnOZ8G.png)
+
+**Output:**
+![](https://i.imgur.com/sccusUV.png)
+
+### Changing A Commit Message:
+Now to change a commit. So, to change the most recent commit we need to type `git commit --amend` and press enter.
+
+```shell
+ $ git commit --amend
+```
+
+![](https://i.imgur.com/ZaMxbjN.png)
+
+Then an editor will open where you can change the commit message. All you need to do is change the message and then you need to close it
+
+![](https://i.imgur.com/PxQk9Kg.png)
+
+ All you need to do is change the message and then you need to close it
+ 
+![](https://i.imgur.com/lpOtID4.png)
+
+by pressing i then esc key then type **“:wq” **to exit the editor. Now you have successfully edited the commit.
+
+![](https://i.imgur.com/ayiBE9W.png)
+
+Unstaging
+======
+Let’s say we have few files in our git repository and we have staged them. 
+
+![](https://i.imgur.com/nHLl0QN.png)
+
+Now for some reason we want to unstage a file.  Let’s see.
+- To unstage a file use `git restore --staged file.ext` It will unstage the file.
+
+```shell
+ $ git restore --staged file.log
+```
+![](https://i.imgur.com/1XoitN7.png)
+
+- Now you can verify it by using `git status`
+
+```shell
+ $ git status
+```
+
+![](https://i.imgur.com/hAVOo5d.png)
+
+Unmodifying
+========
+
+- Now let’s say we have modified the unstaged file and made some changes which were not necessary.
+
+![](https://i.imgur.com/TVQznzg.png)
+
+- Now the program is not working. So we have to restore that file to its previous state where it was working. To do it use `git checkout -- file.ext`
+
+```shell
+ $ git checkout -- file.log
+```
+![](https://i.imgur.com/DzGsOAd.png)
+
+- Now git will restore that file to its last commit state.
+
+```shell
+ $ git status
+```
+
+![](https://i.imgur.com/XhN1IfC.png)
+
+------------
+- To restore your entire working directory to the previous commit use `git checkout -f` It will restore your entire directory to the last commit.
+
+![](https://i.imgur.com/zzW0HIn.png)
+
+```shell
+ $ git checkout -f
+```
+![](https://i.imgur.com/2mhyszJ.png)
+
+- Now If we check the status entire working directory restore to the previous commit.
+
+```shell
+ $ git status
+```
+![](https://i.imgur.com/WlromYl.png)
