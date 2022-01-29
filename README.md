@@ -5,21 +5,17 @@
 
 
 Git
-=============
+===
 Git is the most commonly used version control system. Git tracks the changes you make to files, so you have a record of what has been done, and you can revert to specific versions should you ever need to. Git also makes collaboration easier, allowing changes by multiple people to all be merged into one source. 
 
 So regardless of whether you write code that only you will see, or work as part of a team, Git will be useful for you.
 
 ![](https://i.imgur.com/UmkYZFK.png)
+
 Git is software that runs locally. Your files and their history are stored on your computer. You can also use online hosts (such as [GitHub](https://github.com/ "GitHub") or [Bitbucket](https://bitbucket.org/ "Bitbucket")) to store a copy of the files and their revision history. Having a centrally located place where you can upload your changes and download changes from others, enable you to collaborate more easily with other developers. Git can automatically merge the changes, so two people can even work on different parts of the same file and later merge those changes without losing each others work!
-GitHub
-=============
-GitHub is a website and cloud-based service that helps developers store and manage their code, as well as track and control changes to their code. To understand exactly what GitHub is, you need to know two connected principles:
 
-- Version control
-- Git
 
-What is Version Control?
+Version Control System
 =============
 You can think of a version control system (short: “VCS”) as a kind of“database”. It lets you save a snapshot of your complete project at any time you want. When you later take a look at an older snapshot (let's start calling it“version”), your VCS shows you exactly how it differed from the previous one.
 
@@ -137,12 +133,12 @@ Now that you have git installed, it is a good idea to set up your personal infor
 
 The following commands will set your git commit **username** and **email address**:
 ```shell
-$ git config --global user.name "Your Name"
-$ git config --global user.email "youremail@yourdomain.com"
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
 ```
 To verify the configuration changes, type:
 ```shell
-$ git config --list
+git config --list
 ```
 The output should look something like this:
 
@@ -177,7 +173,7 @@ Let’s say we have 2 files in a folder for which we want to create a git reposi
 - After Git bash is opened type “**git status**”.
 
 ```shell
- $ git status
+git status
 ```
 ![](https://i.imgur.com/nenKgrK.png)
 
@@ -188,7 +184,7 @@ Let’s say we have 2 files in a folder for which we want to create a git reposi
 - Now we will type “**git init**” to initialize this folder as a repository.
 
 ```shell
- $ git init
+git init
 ```
 
 ![](https://i.imgur.com/91AvPqR.png)
@@ -196,42 +192,42 @@ Let’s say we have 2 files in a folder for which we want to create a git reposi
 - Now if we type “**git status**” then we will get the files which are present in the folder. Also, it says there that the files are not tracked.
 
 ```shell
- $ git status
+git status
 ```
 ![](https://i.imgur.com/MLoVx5X.png)
 
 - Now to track all the files inside this got repository we will type  **git add - -a** , which will add all these files to the staging area.
 
 ```shell
- $ git add - -a
+git add - -a
 ```
 ![](https://i.imgur.com/WcAI0ln.png)
 
 - Now if we type **git status** then says there that all the files tracked but not commit yet.
 
 ```shell
- $ git status
+git status
 ```
 ![](https://i.imgur.com/wsoMWdO.png)
 
 - Now we have to commit using this command **git commit -m “Initial Commit”**.
 
 ```shell
- $ git  commit -m "Initial Commit"
+git  commit -m "Initial Commit"
 ```
 ![](https://i.imgur.com/apZHb7i.png)
 
 - Now if we do **git status** again it will say There’s nothing to commit, working tree clean. Which means we have successfully tracked our files.
 
 ```shell
- $ git status
+git status
 ```
 ![](https://i.imgur.com/hSjoNOO.png)
 
 - Now to see the commits we have made, we will use **git log** command.
 
 ```shell
- $ git log
+git log
 ```
 
 ![](https://i.imgur.com/q8O1Bve.png)
@@ -241,14 +237,14 @@ Let’s say we have 2 files in a folder for which we want to create a git reposi
 ![](https://i.imgur.com/frVAQCN.png)
 
 ```shell
- $ git add File1.txt
+git add File1.txt
 ```
 ![](https://i.imgur.com/PxgB58d.png)
 
 - Now we will commit with a message by typing **git commit -m “Your commit message”**
 
 ```shell
- $ git  commit -m "Second Commit"
+git  commit -m "Second Commit"
 ```
 ![](https://i.imgur.com/0TDcY19.png)
 
@@ -267,7 +263,7 @@ Cloning a Remote Git Repository from GitHub
 - Open git bash and type `git clone (copied URL)`
 
 ```shell
- $ git clone https://github.com/basitaminbhatti/Udacity-AI-Programming-with-Python.git
+git clone https://github.com/basitaminbhatti/Udacity-AI-Programming-with-Python.git
 ```
 - Wait for the git clone to complete, this will only take a little bit of time for the first time.
 
@@ -325,7 +321,7 @@ This is an example of what the `.gitignore` file could look like:
 - Open git bash on that folder and type `touch file.log`
 
 ```shell
- $ touch file.log
+touch file.log
 ```
 ![](https://i.imgur.com/6ekDkLc.png)
 
@@ -337,7 +333,7 @@ This is an example of what the `.gitignore` file could look like:
 - Again open git bash and type `touch .gitignore`
 
 ```shell
- $ touch .gitignore
+touch .gitignore
 ```
 
 ![](https://i.imgur.com/1UBetTs.png)
@@ -345,7 +341,7 @@ This is an example of what the `.gitignore` file could look like:
 - Now if you do `git status` it will return you 2 untracked files, .gitignore and file.log.
 
 ```shell
- $ git status
+git status
 ```
 
 ![](https://i.imgur.com/4BvUZWW.png)
@@ -357,14 +353,14 @@ This is an example of what the `.gitignore` file could look like:
 - Now if we do `git status` it will return only 1 file, which is .gitignore. Because the other one will be ignored.
 
 ```shell
- $ git status
+git status
 ```
 ![](https://i.imgur.com/bisrv9F.png)
 
 - Now type `git add --a` to add gitignore to the staging area.
 
 ```shell
- $ git add - -a
+git add - -a
 ```
 
 ![](https://i.imgur.com/WcAI0ln.png)
@@ -372,7 +368,7 @@ This is an example of what the `.gitignore` file could look like:
 - Now let’s commit by typing `git commit -m “added .gitignore”`
 
 ```shell
- $ git  commit -m "added .gitignore"
+git  commit -m "added .gitignore"
 ```
 
 ![](https://i.imgur.com/5HINTR7.png)
@@ -404,7 +400,7 @@ Git Diff
 - Open git bash on that folder and add that file into the staging area by typing `git add --a`
 
 ```shell
- $ git add - -a
+git add - -a
 ```
 
 ![](https://i.imgur.com/3T7l383.png)
@@ -412,7 +408,7 @@ Git Diff
 - Now if you do `git status` it will show that the file has been staged.
 
 ```shell
- $ git status
+git status
 ```
 
 ![](https://i.imgur.com/9UylG4Z.png)
@@ -420,7 +416,7 @@ Git Diff
 - Now if you modify the file and do `git status` , it will show that the file has been modified and not staged for commit and also it will show that the file is ready to be committed.
 
 ```shell
- $ git status
+git status
 ```
 
 ![](https://i.imgur.com/2SCqGcE.png)
@@ -431,7 +427,7 @@ Why does it happen? It happens only because we have staged the file earlier so i
 - Type `git diff` and see the output.
 
 ```shell
- $ git diff
+git diff
 ```
 
 - The output should look like this.
@@ -477,7 +473,7 @@ The remaining content of the diff chunk displays the recent changes. Each change
 - If we use `git diff --staged` it will compare every commit with your working directory.
 
 ```shell
- $ git diff --staged
+git diff --staged
 ``` 
 
 ![](https://i.imgur.com/naFBTke.png)
@@ -489,7 +485,7 @@ Skipping The Staging Area
 - If we do `git status` it will show us that the file has been modified but not has been staged.
 
 ```shell
- $ git status
+git status
 ```
 
 ![](https://i.imgur.com/Oe0aDae.png)
@@ -497,13 +493,13 @@ Skipping The Staging Area
 - Let’s create a new file on that directory and do `git status`
 
 ```shell
- $ git touch file3.txt
+git touch file3.txt
 
 ```
 ![](https://i.imgur.com/OQyZDqB.png)
 
 ```shell
- $ git status
+ git status
 ```
 ![](https://i.imgur.com/a9cdZ8Z.png)
 
@@ -516,14 +512,14 @@ Skipping The Staging Area
 - Now let's skip the staging by typing `git commit -a -m “Direct commit”`
 
 ```shell
- $ git commit -a -m “Direct commit”
+git commit -a -m “Direct commit”
 ```
 ![](https://i.imgur.com/IxFtkz5.png)
 
 - Now if we do `git status` it will show that the working directory is clean. Which means we have successfully skipped the staging area and committed the changes.
 
 ```shell
- $ git status
+git status
 ```
 
 ![](https://i.imgur.com/vNANPw3.png)
@@ -535,12 +531,12 @@ We can also do it manually but then, we need to stage those changes using git ba
 To delete files using git we need use this command: `git rm filename.extension` It will delete the file and if you do `git status` now it will say that the file has been deleted and staged. Now we can commit it by using the “git commit -m “commit message”” command.
 
 ```shell
- $ git rm file3.txt  # where file name is file3.txt
+git rm file3.txt  # where file name is file3.txt
 ```
 ![](https://i.imgur.com/5aIyf6d.png)
 
 ```shell
- $ git status
+git status
 ```
 ![](https://i.imgur.com/oaL85wL.png)
 
@@ -548,7 +544,7 @@ To delete files using git we need use this command: `git rm filename.extension` 
 To rename file we need to use this command : `git mv filename.extension renamefile.extension` It will rename the file from **filename.extension** to **renamefile.extension**. And it will also get automatically staged by git. All we need to do is commit.
 
 ```shell
- $ git mv File1.txt NewFileName.txt
+ git mv File1.txt NewFileName.txt
 ```
 
 ![](https://i.imgur.com/HWCirdG.png)
@@ -559,7 +555,7 @@ The Git rm –cached flag removes a file from the staging area. The files from t
 To untrack a specific file we need to use `git rm --cached file.extension` command. It will remove that file from the tracker and it will become an untracked file.
 
 ```shell
- $ git rm --cached IGo.txt
+git rm --cached IGo.txt
 ```
 
 ![](https://i.imgur.com/GjU77lF.png)
@@ -570,7 +566,7 @@ Git Log
 To see the commits made on the git repo, we need to type `git log` After typing this you can see the commits that have been made on the repo.
 
 ```shell
- $ git log
+ git log
 ```
 ![](https://i.imgur.com/Otoz7Ww.png)
 
@@ -583,7 +579,7 @@ To exit we need to type “**q**” on our keyboard and press enter.
 To see the Diff in a commit we need to use `git log -p` It will show what has been changed on a commit.
 
 ```shell
- $ git log -p
+git log -p
 ```
 ![](https://i.imgur.com/ywPO9KN.png)
 
@@ -593,13 +589,13 @@ To see the Diff in a commit we need to use `git log -p` It will show what has be
 ###  Specific No Commits with Changes:
 To see specific no commits with changes we need to use `git log -p -2` (for seeing the last 2 changes).
 ```shell
- $ git log -p -2
+git log -p -2
 ```
 ![](https://i.imgur.com/SbUe1TZ.png)
 ### Brief Summary:
 We can get a brief summary of commits by typing `git log --stat`
 ```shell
- $ git log --stat
+git log --stat
 ```
 ![](https://i.imgur.com/R6qsUT1.png)
 
@@ -612,7 +608,7 @@ We can get a brief summary of commits by typing `git log --stat`
 If you want to see the commits on one line then type `git log --pretty=oneline`
 
 ```shell
- $ git log --pretty=oneline
+git log --pretty=oneline
 ```
 ![](https://i.imgur.com/RSK7drw.png)
 
@@ -624,7 +620,7 @@ If you want to see the commits on one line then type `git log --pretty=oneline`
 If you just want to see the commits and The author then use `git log --pretty=short`
 
 ```shell
- $ git log --pretty=short
+git log --pretty=short
 ```
 ![](https://i.imgur.com/NhD5PNI.png)
 
@@ -636,7 +632,7 @@ If you just want to see the commits and The author then use `git log --pretty=sh
 If you want a little bit more info like who is the committer, commit message, then use `git log --pretty=full`
 
 ```shell
- $ git log --pretty=full
+git log --pretty=full
 ```
 ![](https://i.imgur.com/SXZzoXQ.png)
 
@@ -650,7 +646,7 @@ We can format the output by using the formatting  codes provided in [Gits](https
 we can use this format to print just the author name and the hash : `git log --pretty=format:“%h --%ae”`
 
 ```shell
- $ git log --pretty=format:“%h --%ae”
+git log --pretty=format:“%h --%ae”
 ```
 ![](https://i.imgur.com/r6w98cG.png)
 
@@ -659,7 +655,7 @@ we can use this format to print just the author name and the hash : `git log --p
 If you want to filter commits by time, then use this command, `git log --since=2.weeks` to see the last 2 weeks of data.
 
 ```shell
- $ git log --since=2.weeks
+git log --since=2.weeks
 ```
 ![](https://i.imgur.com/3OnKT0v.png)
 
@@ -670,7 +666,7 @@ If you want to filter commits by time, then use this command, `git log --since=2
 To see the last 2 months of data type `git log --since=2.months`
 
 ```shell
- $ git log --since=2.months
+git log --since=2.months
 ```
 ![](https://i.imgur.com/rxnOZ8G.png)
 
@@ -681,7 +677,7 @@ To see the last 2 months of data type `git log --since=2.months`
 Now to change a commit. So, to change the most recent commit we need to type `git commit --amend` and press enter.
 
 ```shell
- $ git commit --amend
+git commit --amend
 ```
 
 ![](https://i.imgur.com/ZaMxbjN.png)
@@ -708,14 +704,14 @@ Now for some reason we want to unstage a file.  Let’s see.
 - To unstage a file use `git restore --staged file.ext` It will unstage the file.
 
 ```shell
- $ git restore --staged file.log
+git restore --staged file.log
 ```
 ![](https://i.imgur.com/1XoitN7.png)
 
 - Now you can verify it by using `git status`
 
 ```shell
- $ git status
+git status
 ```
 
 ![](https://i.imgur.com/hAVOo5d.png)
@@ -730,14 +726,14 @@ Unmodifying
 - Now the program is not working. So we have to restore that file to its previous state where it was working. To do it use `git checkout -- file.ext`
 
 ```shell
- $ git checkout -- file.log
+git checkout -- file.log
 ```
 ![](https://i.imgur.com/DzGsOAd.png)
 
 - Now git will restore that file to its last commit state.
 
 ```shell
- $ git status
+git status
 ```
 
 ![](https://i.imgur.com/XhN1IfC.png)
@@ -748,13 +744,148 @@ Unmodifying
 ![](https://i.imgur.com/zzW0HIn.png)
 
 ```shell
- $ git checkout -f
+git checkout -f
 ```
 ![](https://i.imgur.com/2mhyszJ.png)
 
 - Now If we check the status entire working directory restore to the previous commit.
 
 ```shell
- $ git status
+git status
 ```
 ![](https://i.imgur.com/WlromYl.png)
+
+GitHub
+====
+GitHub is a website and cloud-based service that helps developers store and manage their code, as well as track and control changes to their code. To understand exactly what GitHub is, you need to know two connected principles:
+
+- Version control
+- Git
+
+
+Create A Github Account
+===============
+- **Step # 1: ** Goto **[GitHub](https://github.com/ "GitHub") ** Website.
+
+[![GitHub](https://i.imgur.com/G0Tj1o7.png "GitHub")](https://github.com/ "GitHub")
+
+- **Step # 2: **  Click on "**Sign up for Github**" button.
+
+![](https://i.imgur.com/uUjACdd.png)
+
+- **Step # 3: ** 
+	 - Enter your valid email address and password which you want to give.
+	 - Enter username of your choice (you can change your username later)(choosing a name which is easily remembered, short and professional looking is useful) (in the end it's your choice to pickup your username)
+	 - Enter y or n in next field according to your choice if you want to receive promotional emails from GitHub (I prefer to choose n)
+	 - Resolve a captcha and click on create account
+
+![](https://i.imgur.com/lV2jHt1.png)
+
+- **Step # 4: **  Next you will need to add the code received on your entered email address.
+
+![](https://i.imgur.com/IT59Yo2.png)
+
+- **Step # 5: **  After that you will be prompted to answer some question.
+- **Step # 6: **  Choose just me or 2-5 option & Student (as we are student right now, you can choose developer if you are not student)
+
+![](https://i.imgur.com/U2ROc6b.png)
+
+- **Step # 7: **  Choose some features which you are interested in using? or looks interesting to you.
+
+![](https://i.imgur.com/UuhXvDE.png)
+
+- **Step # 8: **  After that choose the free option
+
+![](https://i.imgur.com/ftXtgog.png)
+
+- **Step # 9: **  Once you see the similar screen as below then it means you have created your GitHub account successfully.
+
+![](https://i.imgur.com/hbmspgM.png)
+
+
+Set up SSH authentication with GitHub
+=======================
+Adding an SSH key to GitHub allows you to pull and push data without typing in your password all the time. First we'll copy the key we generated in the Create an SSH Key step and add it to your GitHub account.
+
+- **Step # 1: **  Go to your account settings on github.
+
+[![GitHub Profile Setting](https://i.imgur.com/YjF9s6y.png "GitHub Profile Setting")](https://github.com/settings/profile "GitHub Profile Setting")
+
+- **Step # 2: **  Then SSH and GPG keys.
+
+[![SSH Keys](https://i.imgur.com/h8xL53H.png "SSH Keys")](https://github.com/settings/keys "SSH Keys")
+
+- **Step # 3: **  Then click on the new SSH key.
+
+[![SSH Keys](https://i.imgur.com/uD4PZlw.png "SSH Keys")](https://github.com/settings/keys "SSH Keys")
+
+- **Step # 4: **  Add a title. Now for the key.
+
+![](https://i.imgur.com/OZEEQDl.png)
+
+- **Step # 5: **  Open git bash and follow the simple steps.
+
+- **Step # 6: **  On git bash type the following edit your email and press enter: `ssh-keygen -t rsa -b 4096 -C "your_email@example.com" `
+
+```shell
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+![](https://i.imgur.com/IXOUJr4.png)
+
+- **Step # 7: **  Now just simply press enter 3 times.
+
+**Output:**
+![](https://i.imgur.com/NQ3ncmL.png)
+
+- **Step # 8: **  Now run this command `eval $(ssh-agent -s)`
+
+```shell
+eval $(ssh-agent -s)
+```
+![](https://i.imgur.com/7nyG5VM.png)
+
+- **Step # 9: **  Now run this `ssh-add ~/.ssh/id_rsa`
+
+```shell
+ssh-add ~/.ssh/id_rsa
+```
+![](https://i.imgur.com/GKiO0lU.png)
+
+- **Step # 10: **  Now on git bash type this to reveal your key `tail ~/.ssh/id_rsa.pub`
+
+```shell
+tail ~/.ssh/id_rsa.pub
+```
+![](https://i.imgur.com/vLMuHSt.png1)
+
+- **Step # 11: **  Now it will show you the ssh key. Just simply copy it.
+
+![](https://i.imgur.com/vLMuHSt.png)
+
+- **Step # 12: **  And now let’s head back to the github SSH key page and paste the key to the key field, press add ssh key. And done!
+
+[![Add new SSH Key](https://i.imgur.com/AVUwPUQ.png "Add new SSH Key")](https://github.com/settings/ssh/new "Add new SSH Key")
+
+
+Working with Remote Repositories
+======================
+- Go to your local directory and open git bash there.
+- So let’s copy the code on git’s website which looks like this `git remote add origin https://github.com/yourusername/repositoryname.git` **(Repository Link)** and paste it to the git bash and press enter.
+
+```shell
+git remote add origin https://github.com/basitaminbhatti/Git-For-Beginners.git
+```
+
+![](https://i.imgur.com/nCdaqwa.png)
+
+
+- Now we will paste the second command which pushes the files onto the remote server which is `git push -u origin master`
+
+```shell
+git push -u origin master
+```
+![](https://i.imgur.com/1JRzAdc.png)
+
+- It will run and push your files to github.
+
+![](https://i.imgur.com/2QgBcHl.png)
