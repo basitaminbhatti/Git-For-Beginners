@@ -1,4 +1,4 @@
-[![Git](https://i.imgur.com/16piyqz.png "Git")](https://git-scm.com/ "Git")
+[![Git](https://i.imgur.com/9cCzCdY.png "Git")](https://git-scm.com/ "Git")
 ### Table of Contents
 
 [TOCM]
@@ -755,6 +755,9 @@ git status
 ```
 ![](https://i.imgur.com/WlromYl.png)
 
+[![GitHub](https://i.imgur.com/w47k9l7.png "GitHub")](https://github.com/ "GitHub")
+
+
 GitHub
 ====
 GitHub is a website and cloud-based service that helps developers store and manage their code, as well as track and control changes to their code. To understand exactly what GitHub is, you need to know two connected principles:
@@ -765,15 +768,15 @@ GitHub is a website and cloud-based service that helps developers store and mana
 
 Create A Github Account
 ===============
-- **Step # 1: ** Goto **[GitHub](https://github.com/ "GitHub") ** Website.
+- **Step # 1:** Goto **[GitHub](https://github.com/ "GitHub") ** Website.
 
 [![GitHub](https://i.imgur.com/G0Tj1o7.png "GitHub")](https://github.com/ "GitHub")
 
-- **Step # 2: **  Click on "**Sign up for Github**" button.
+- **Step # 2:**  Click on "**Sign up for Github**" button.
 
 ![](https://i.imgur.com/uUjACdd.png)
 
-- **Step # 3: ** 
+- **Step # 3:** 
 	 - Enter your valid email address and password which you want to give.
 	 - Enter username of your choice (you can change your username later)(choosing a name which is easily remembered, short and professional looking is useful) (in the end it's your choice to pickup your username)
 	 - Enter y or n in next field according to your choice if you want to receive promotional emails from GitHub (I prefer to choose n)
@@ -781,7 +784,7 @@ Create A Github Account
 
 ![](https://i.imgur.com/lV2jHt1.png)
 
-- **Step # 4: **  Next you will need to add the code received on your entered email address.
+- **Step # 4 **:  Next you will need to add the code received on your entered email address.
 
 ![](https://i.imgur.com/IT59Yo2.png)
 
@@ -889,3 +892,56 @@ git push -u origin master
 - It will run and push your files to github.
 
 ![](https://i.imgur.com/2QgBcHl.png)
+
+Alias
+===
+Alias is a term which is associated with shortcuts in Git. It shortens the long commands to increase efficiency. So let’s see how to set up an alias.
+### Setting Up Alias:
+- Open git bash and now type this command to set up alias for `git status`
+- Type `git config --global alias.st status` and press enter.
+
+```shell
+git config --global alias.st status
+```
+![](https://i.imgur.com/zeJTdd3.png)
+
+- Now what it means is if we type `git st` it will give us the output of `git status`
+
+```shell
+git st
+```
+
+![](https://i.imgur.com/czL5t0p.png)
+
+- **Let’s do another one. **
+- Now type `git config --global alias.unstage ‘restore --staged --’ `
+
+```shell
+git config --global alias.unstage 'restore --staged --' 
+```
+![](https://i.imgur.com/Atrcejp.png)
+
+- Now if you type `git unstage` it will work as `git restore --staged --`
+
+```shell
+git unstage file.log
+```
+
+![](https://i.imgur.com/tjGusvO.png)
+
+- We can set up as many aliases we want. Like we can create an alias for seeing the last commit done by the user.
+- To do that type `git config --global alias.last 'log -p -1' `
+
+```shell
+git config --global alias.last 'log -p -1'
+
+```
+![](https://i.imgur.com/JrXyQ9r.png)
+
+
+- Now if we type `git last` it will show us the last commit done by the user.
+
+```shell
+git last
+```
+![](https://i.imgur.com/ryuPTNj.png)
