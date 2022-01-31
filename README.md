@@ -784,24 +784,24 @@ Create A Github Account
 
 ![](https://i.imgur.com/lV2jHt1.png)
 
-- **Step # 4 **:  Next you will need to add the code received on your entered email address.
+- **Step # 4:**  Next you will need to add the code received on your entered email address.
 
 ![](https://i.imgur.com/IT59Yo2.png)
 
-- **Step # 5: **  After that you will be prompted to answer some question.
-- **Step # 6: **  Choose just me or 2-5 option & Student (as we are student right now, you can choose developer if you are not student)
+- **Step # 5:**  After that you will be prompted to answer some question.
+- **Step # 6:**  Choose just me or 2-5 option & Student (as we are student right now, you can choose developer if you are not student)
 
 ![](https://i.imgur.com/U2ROc6b.png)
 
-- **Step # 7: **  Choose some features which you are interested in using? or looks interesting to you.
+- **Step # 7:**  Choose some features which you are interested in using? or looks interesting to you.
 
 ![](https://i.imgur.com/UuhXvDE.png)
 
-- **Step # 8: **  After that choose the free option
+- **Step # 8:**  After that choose the free option
 
 ![](https://i.imgur.com/ftXtgog.png)
 
-- **Step # 9: **  Once you see the similar screen as below then it means you have created your GitHub account successfully.
+- **Step # 9:**  Once you see the similar screen as below then it means you have created your GitHub account successfully.
 
 ![](https://i.imgur.com/hbmspgM.png)
 
@@ -810,62 +810,62 @@ Set up SSH authentication with GitHub
 =======================
 Adding an SSH key to GitHub allows you to pull and push data without typing in your password all the time. First we'll copy the key we generated in the Create an SSH Key step and add it to your GitHub account.
 
-- **Step # 1: **  Go to your account settings on github.
+- **Step # 1:**  Go to your account settings on github.
 
 [![GitHub Profile Setting](https://i.imgur.com/YjF9s6y.png "GitHub Profile Setting")](https://github.com/settings/profile "GitHub Profile Setting")
 
-- **Step # 2: **  Then SSH and GPG keys.
+- **Step # 2:**  Then SSH and GPG keys.
 
 [![SSH Keys](https://i.imgur.com/h8xL53H.png "SSH Keys")](https://github.com/settings/keys "SSH Keys")
 
-- **Step # 3: **  Then click on the new SSH key.
+- **Step # 3:**  Then click on the new SSH key.
 
 [![SSH Keys](https://i.imgur.com/uD4PZlw.png "SSH Keys")](https://github.com/settings/keys "SSH Keys")
 
-- **Step # 4: **  Add a title. Now for the key.
+- **Step # 4:**  Add a title. Now for the key.
 
 ![](https://i.imgur.com/OZEEQDl.png)
 
-- **Step # 5: **  Open git bash and follow the simple steps.
+- **Step # 5:**  Open git bash and follow the simple steps.
 
-- **Step # 6: **  On git bash type the following edit your email and press enter: `ssh-keygen -t rsa -b 4096 -C "your_email@example.com" `
+- **Step # 6:**  On git bash type the following edit your email and press enter: `ssh-keygen -t rsa -b 4096 -C "your_email@example.com" `
 
 ```shell
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 ![](https://i.imgur.com/IXOUJr4.png)
 
-- **Step # 7: **  Now just simply press enter 3 times.
+- **Step # 7:**  Now just simply press enter 3 times.
 
 **Output:**
 ![](https://i.imgur.com/NQ3ncmL.png)
 
-- **Step # 8: **  Now run this command `eval $(ssh-agent -s)`
+- **Step # 8:**  Now run this command `eval $(ssh-agent -s)`
 
 ```shell
 eval $(ssh-agent -s)
 ```
 ![](https://i.imgur.com/7nyG5VM.png)
 
-- **Step # 9: **  Now run this `ssh-add ~/.ssh/id_rsa`
+- **Step # 9:**  Now run this `ssh-add ~/.ssh/id_rsa`
 
 ```shell
 ssh-add ~/.ssh/id_rsa
 ```
 ![](https://i.imgur.com/GKiO0lU.png)
 
-- **Step # 10: **  Now on git bash type this to reveal your key `tail ~/.ssh/id_rsa.pub`
+- **Step # 10:**  Now on git bash type this to reveal your key `tail ~/.ssh/id_rsa.pub`
 
 ```shell
 tail ~/.ssh/id_rsa.pub
 ```
 ![](https://i.imgur.com/vLMuHSt.png1)
 
-- **Step # 11: **  Now it will show you the ssh key. Just simply copy it.
+- **Step # 11:**  Now it will show you the ssh key. Just simply copy it.
 
 ![](https://i.imgur.com/vLMuHSt.png)
 
-- **Step # 12: **  And now let’s head back to the github SSH key page and paste the key to the key field, press add ssh key. And done!
+- **Step # 12:**  And now let’s head back to the github SSH key page and paste the key to the key field, press add ssh key. And done!
 
 [![Add new SSH Key](https://i.imgur.com/AVUwPUQ.png "Add new SSH Key")](https://github.com/settings/ssh/new "Add new SSH Key")
 
@@ -945,3 +945,61 @@ git config --global alias.last 'log -p -1'
 git last
 ```
 ![](https://i.imgur.com/ryuPTNj.png)
+
+Creating & Switching Branches
+====
+
+### Branch:
+Branch is a way to add new features or modification to the software and not affecting the main part of the project. We can also say that branches create another line of development in the project.
+
+### Creating Branches:
+- Master Branch 
+
+![](https://i.imgur.com/rndPcDL.png)
+
+- Open Git Bash on your local repository.
+- Let’s create a branch by typing `git checkout -b branchname`
+
+```shell
+git checkout -b branchname
+```
+![](https://i.imgur.com/51icE7z.png)
+
+- Now if you modify the files in the repo and do `git status` it will show you “on Branch branchname” which means you are changing files on the branch you have created.
+
+```shell
+git status
+```
+![](https://i.imgur.com/Uo5O956.png)
+
+- Now change some file in **new idea** branch.
+
+![](https://i.imgur.com/ASxAtB5.png)
+
+- Let’s stage these files by using `git add .` and commit these changes by typing `git commit -m “commit message” `
+
+```shell
+git add .
+git commit -m “commit message”
+```
+![](https://i.imgur.com/mKB49ZT.png)
+
+### Switching Branches:
+
+- Now if you do `git checkout master` then you will see that the files on your repo will revert to the master branch where we haven’t made any changes.
+
+```shell
+git checkout master
+```
+![](https://i.imgur.com/mkPkjff.png)
+
+![](https://i.imgur.com/rndPcDL.png)
+
+- Now if we do `git checkout branchname` we will switch from master branch to our newly created branch where we have modified files.
+
+```shell
+git checkout branchname
+```
+![](https://i.imgur.com/xXKdPsx.png)
+
+![](https://i.imgur.com/ASxAtB5.png)
