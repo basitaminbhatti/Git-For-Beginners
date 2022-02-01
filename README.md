@@ -392,10 +392,11 @@ git  commit -m "added .gitignore"
 
 Git Diff
 =====
- Showing Changes Between Commits/Staging Area & Working Directory
+Showing Changes Between Commits/Staging Area & Working Directory
  <hr>
- ### What is Git Diff?
- Diff command is used in git to track the difference between the changes made on a file. Since Git is a version control system, tracking changes is a very vital part to it. Diff command takes two inputs and shows the differences between them. These inputs can be branches, working trees, commits and more. Now Let’s learn about Git Diff in these simple steps.
+### What is Git Diff?
+ 
+Diff command is used in git to track the difference between the changes made on a file. Since Git is a version control system, tracking changes is a very vital part to it. Diff command takes two inputs and shows the differences between them. These inputs can be branches, working trees, commits and more. Now Let’s learn about Git Diff in these simple steps.
 -  Let’s start by staging one file. 
 - Open git bash on that folder and add that file into the staging area by typing `git add --a`
 
@@ -1003,3 +1004,66 @@ git checkout branchname
 ![](https://i.imgur.com/xXKdPsx.png)
 
 ![](https://i.imgur.com/ASxAtB5.png)
+
+### Checking Branches:
+- If you want to know how many branches are existing just run this command: `git branch`
+
+```shell
+git branch
+```
+![](https://i.imgur.com/SAfQfl9.png)
+
+### Rename Branch:
+- If you want to rename the current branch, you can do: `git branch -m <newname>`
+
+```shell
+git branch -m <newname>
+```
+
+![](https://i.imgur.com/mtlEPs7.png)
+
+- If you want to rename a branch while pointed to any branch, do: `git branch -m <oldname> <newname>`
+
+```shell
+git branch -m <oldname> <newname>
+```
+
+![](https://i.imgur.com/cwjnJUI.png)
+
+
+### Merge Branches:
+- Now if we do `git merge branchname` it will merge those branches.
+
+```shell
+git merge branchname
+```
+![](https://i.imgur.com/zpmkeuJ.png)
+
+
+### Merge Conflicts:
+#### When Merge Conflicts happen?
+When you merge branches that have competing commits, and Git cannot decide which changes to incorporate in the final merge, that's when merge conflicts happen.
+
+#### Resolving Conflicts:
+There are many ways to resolve conflicts on Git Merge. But we are going to use the easiest one. By using VSCode. [Just Install VS Code](https://code.visualstudio.com/download "Just Install VS Code") in your system and open those files who have conflicts, and you will see 2 options: **Current Change** and **Incoming Change**. Just like this.
+
+![](https://i.imgur.com/NyI5gSe.png)
+
+Just choose **Accept Incoming Change**. Save the file and commit the files by typing `git add .` and`git commit -m “message”` Now you have successfully merged 2 branches.
+
+
+### Deleting Branch:
+- Delete the specified branch. This is a **“safe”** operation in that Git prevents you from deleting the branch if it has unmerged changes.
+
+```shell
+git branch -d <branch>
+```
+![](https://i.imgur.com/kiEF07U.png)
+
+- Force delete the specified branch, even if it has unmerged changes. This is the command to use if you want to permanently throw away all of the commits associated with a particular line of development.
+
+```shell
+git branch -D <branch>
+```
+
+![](https://i.imgur.com/2nMVlWo.png)
