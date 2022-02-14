@@ -1069,4 +1069,3 @@ git branch -D <branch>
 ![](https://i.imgur.com/2nMVlWo.png)
 
 
-
